@@ -1,0 +1,30 @@
+header {
+  padding: 1.5rem 3rem;
+  color: inherit;
+  background-color: inherit;
+  box-shadow: 0 0.3rem 2rem rgba(52, 52, 52, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & h2 {
+    font-size: $home-font;
+  }
+
+  & div {
+    flex-basis: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    & svg {
+      height: 1rem;
+      width: 1rem;
+    }
+
+    & p {
+      font-size: $home-font;
+      opacity: 0.9;
+    }
+  }
+}

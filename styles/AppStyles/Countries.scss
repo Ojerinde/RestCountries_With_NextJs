@@ -1,0 +1,18 @@
+.light {
+  background-color: $light-mode-background;
+}
+.dark {
+  background-color: $dark-mode-background;
+}
+
+.countries {
+  padding: 4rem 6rem;
+
+  & ul {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+}

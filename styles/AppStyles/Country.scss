@@ -1,0 +1,40 @@
+.light_country {
+  background-color: $light-mode-element;
+}
+.dark_country {
+  background-color: $dark-mode-element;
+}
+
+.country {
+  flex-basis: 22%;
+  margin-top: 3rem;
+  border-radius: 0.7rem;
+  box-shadow: 0 0.3rem 2rem rgba(52, 52, 52, 0.2);
+  color: inherit;
+  cursor: pointer;
+
+  & img {
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  & div {
+    padding: 2.5rem 2rem 1.5rem;
+    & h1 {
+      font-size: $home-font;
+      font-weight: 800;
+      margin: 1.5rem 0;
+    }
+    & p {
+      font-weight: 600;
+      font-size: $home-font;
+      margin: 1rem 0;
+
+      & span {
+        font-weight: 400;
+        opacity: 0.8rem;
+      }
+    }
+  }
+}

@@ -1,29 +1,47 @@
-.input__group {
+.input__box {
+  padding: 0.4rem 0;
+  flex-basis: 35%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
 
-  & label {
-    font-size: 1.5rem;
-    font-weight: 600;
+  & svg {
+    height: 2rem;
+    width: 2rem;
+    flex-basis: 10%;
   }
 
   & input {
-    padding: 0.5rem;
-    border-radius: 0.3rem;
-    margin: 0.7rem 0 1.4rem 0;
-    font-size: 1.4rem;
-    font-weight: 300;
-    color: rgba(35, 75, 75, 0.9);
+    padding: 0.6rem;
+    flex-basis: 85%;
+    border-radius: 0.5rem;
+    font-size: $home-font;
+    border: none;
+    color: inherit;
+    background-color: inherit;
 
     &:focus {
       outline: none;
     }
 
     &::placeholder {
-      color: rgba(42, 41, 41, 0.6);
-      font-weight: 400;
-      font-size: 1.1rem;
+      color: $light-mode-input;
       letter-spacing: 0.1rem;
     }
   }
+}
+.select__box {
+  flex-basis: 20%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: .4rem;
+  color: inherit;
+}
+
+.input_light {
+  background-color: $light-mode-element;
+}
+
+.input_dark {
+  background-color: $dark-mode-element;
 }

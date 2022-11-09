@@ -14,7 +14,7 @@
   cursor: pointer;
 
   & img {
-    height: 30vh;
+    height:23vh;
     width: 100%;
     object-fit: cover;
   }
@@ -24,7 +24,7 @@
     & h1 {
       font-size: $home-font;
       font-weight: 800;
-      margin: 1.5rem 0;
+      margin: 1rem 0 1.5rem;
     }
     & p {
       font-weight: 600;

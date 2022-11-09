@@ -4,66 +4,7 @@ import Country from "./Country";
 import SearchBox from "./SearchBox";
 
 const Countries = () => {
-  const { background } = useContext(AppContext);
-
-  const countries = [
-    {
-      img: "",
-      name: "Joel",
-      population: 1000,
-      region: "Nigeria",
-      capital: "Abuja",
-    },
-    {
-      img: "",
-      name: "Jethro",
-      population: 5000,
-      region: "Nigeria",
-      capital: "Abuja",
-    },
-    {
-      img: "",
-      name: "Jethro",
-      population: 5000,
-      region: "Nigeria",
-      capital: "Abuja",
-    },
-    {
-      img: "",
-      name: "Jethro",
-      population: 5000,
-      region: "Nigeria",
-      capital: "Abuja",
-    },
-    {
-      img: "",
-      name: "Jethro",
-      population: 5000,
-      region: "Nigeria",
-      capital: "Abuja",
-    },
-    {
-      img: "",
-      name: "Jethro",
-      population: 5000,
-      region: "Nigeria",
-      capital: "Abuja",
-    },
-    {
-      img: "",
-      name: "Jethro",
-      population: 5000,
-      region: "Nigeria",
-      capital: "Abuja",
-    },
-    {
-      img: "",
-      name: "Jethro",
-      population: 5000,
-      region: "Nigeria",
-      capital: "Abuja",
-    },
-  ];
+  const { background, countries } = useContext(AppContext);
 
   return (
     <section
@@ -73,6 +14,8 @@ const Countries = () => {
       <ul>
         {countries.map((country) => (
           <Country
+            key={country.id}
+            id={country.id}
             img={country.img}
             name={country.name}
             population={country.population}

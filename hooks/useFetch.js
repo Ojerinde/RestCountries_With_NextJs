@@ -23,7 +23,7 @@ const useFetch = () => {
   };
 
   const fetchRequest = useCallback(
-    async (requestConfig, getQuestionsFromRequest = () => {}) => {
+    async (requestConfig, getCountriesFromRequest = () => {}) => {
       dispatchFn({ type: "LOADING", value: true });
       dispatchFn({ type: "ERROR", value: { hasError: false, message: "" } });
       try {
@@ -36,8 +36,19 @@ const useFetch = () => {
           throw new Error(`${requestConfig.errorMessage}`);
         }
         const responseBody = await response.json();
-        console.log(responseBody);
-        getQuestionsFromRequest(responseBody);
+        const transformedBody = responseBody
+          .slice(0, 50)
+          .map((country, index) => ({
+            id: index,
+            name: country.name,
+            img: country.flags.svg,
+            capital: country.capital,
+            region: country.region,
+            population: country.population,
+            borders: country.borders,
+            language: country.languages[0].nativeName,
+          }));
+        getCountriesFromRequest(transformedBody);
       } catch (err) {
         dispatchFn({
           type: "ERROR",

@@ -1,13 +1,16 @@
+import { useRouter } from "next/router";
 import { useContext } from "react";
 import AppContext from "../../store/AppContext";
 
-const Country = ({ img, name, population, region, capital }) => {
+const Country = ({ id, img, name, population, region, capital }) => {
+  const router = useRouter();
   const { background } = useContext(AppContext);
   return (
     <li
       className={`country ${
         background === "dark" ? "dark_country" : "light-country"
       }`}
+      onClick={() => router.push(`/${id}`)}
     >
       <img src={img} alt={name} />
       <div>

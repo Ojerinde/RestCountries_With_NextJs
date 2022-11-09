@@ -18,11 +18,12 @@ const Input = React.forwardRef((props, ref) => {
           <input {...others} ref={ref} />
         </div>
       ) : (
-        <select
+        <select {...others}
           className={`select__box ${
             background === "dark" ? "input_dark" : "input_light"
           }`}
         >
+          <option value="" selected>Filter by region</option>
           <option value="africa">Africa</option>
           <option value="america">America</option>
           <option value="asia">Asia</option>

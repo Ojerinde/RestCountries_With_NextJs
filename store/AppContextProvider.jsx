@@ -3,6 +3,7 @@ import AppContext from "./AppContext";
 
 const AppContextProvider = (props) => {
   const [background, setBackground] = useState("dark");
+  const [countries, setCountries] = useState([]);
 
   const changeBackground = () => {
     setBackground((prev) => {
@@ -14,11 +15,19 @@ const AppContextProvider = (props) => {
     });
   };
 
+  const addCountries = (data) => {
+    setCountries((prev) => data);
+  };
+
   const data = {
     background,
     changeBackground,
+    countries,
+    addCountries,
   };
 
-  return <AppContext.Provider value={data}>{props.children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={data}>{props.children}</AppContext.Provider>
+  );
 };
 export default AppContextProvider;

@@ -13,7 +13,7 @@ header {
   }
 
   & div {
-    flex-basis: 8%;
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -23,6 +23,7 @@ header {
     }
 
     & p {
+      margin-left: .6rem;
       font-size: $home-font;
       opacity: 0.9;
     }

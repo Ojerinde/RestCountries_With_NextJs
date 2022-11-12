@@ -10,7 +10,7 @@ const Country = ({ id, img, name, population, region, capital }) => {
       className={`country ${
         background === "dark" ? "dark_country" : "light-country"
       }`}
-      onClick={() => router.push(`/${id}`)}
+      onClick={() => router.push(`/${name}`)}
     >
       <img src={img} alt={name} />
       <div>

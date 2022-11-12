@@ -6,7 +6,7 @@ import AppContext from "../../store/AppContext";
 const Header = () => {
   const { background, changeBackground } = useContext(AppContext);
   return (
-    <header>
+    <header className={background === "dark" ? "dark-mode" : "light-mode"}>
       <h1>Where in the world?</h1>
       <div>
         <BsMoonFill />

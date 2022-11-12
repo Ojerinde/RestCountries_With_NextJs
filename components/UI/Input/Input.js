@@ -23,12 +23,12 @@ const Input = React.forwardRef((props, ref) => {
             background === "dark" ? "input_dark" : "input_light"
           }`}
         >
-          <option value="" selected>Filter by region</option>
+          <option value="" defaultValue>Filter by region</option>
           <option value="africa">Africa</option>
-          <option value="america">America</option>
+          <option value="americas">Americas</option>
           <option value="asia">Asia</option>
           <option value="europe">Europe</option>
-          <option value="oceanic">Oceanic</option>
+          <option value="oceania">Oceania</option>
         </select>
       )}
     </>

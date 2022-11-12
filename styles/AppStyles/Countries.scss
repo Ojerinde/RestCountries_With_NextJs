@@ -6,6 +6,8 @@
 }
 
 .countries {
+  height: fit-content;
+  min-height: calc(100vh - 5.3rem);
   padding: 4rem 6rem;
 
   & ul {
@@ -14,5 +16,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
+    color: inherit;
   }
 }

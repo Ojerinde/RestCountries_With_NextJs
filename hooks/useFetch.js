@@ -36,18 +36,25 @@ const useFetch = () => {
           throw new Error(`${requestConfig.errorMessage}`);
         }
         const responseBody = await response.json();
+
         const transformedBody = responseBody
-          .slice(0, 50)
+          .slice(0, 24)
           .map((country, index) => ({
             id: index,
             name: country.name,
             img: country.flags.svg,
             capital: country.capital,
             region: country.region,
+            subregion: country.subregion,
+            timezones: country.timezones[0],
             population: country.population,
             borders: country.borders,
-            language: country.languages[0].nativeName,
+            nativeName: country.nativeName,
+            independent: country.independent,
+            language: country.languages[0].name,
+            topLevelDomain: country.topLevelDomain[0],
           }));
+
         getCountriesFromRequest(transformedBody);
       } catch (err) {
         dispatchFn({

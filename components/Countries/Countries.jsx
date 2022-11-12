@@ -3,8 +3,8 @@ import AppContext from "../../store/AppContext";
 import Country from "./Country";
 import SearchBox from "./SearchBox";
 
-const Countries = () => {
-  const { background, countries } = useContext(AppContext);
+const Countries = ({ countries }) => {
+  const { background } = useContext(AppContext);
 
   return (
     <section

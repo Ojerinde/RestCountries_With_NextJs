@@ -4,6 +4,11 @@
   display: flex;
   align-items: center;
 
+  @media only screen and (max-width: 375px) {
+    & {
+      width: 100%;
+    }
+  }
   & svg {
     height: 2rem;
     width: 2rem;
@@ -26,6 +31,7 @@
     &::placeholder {
       color: $light-mode-input;
       letter-spacing: 0.1rem;
+      font-size: $detail-font;
     }
   }
 }
@@ -34,8 +40,15 @@
   padding: 1rem;
   outline: none;
   border: none;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   color: inherit;
+  letter-spacing: .15rem;
+
+  @media only screen and (max-width: 375px) {
+    & {
+      width: 60%;
+    }
+  }
 }
 
 .input_light {

@@ -1,0 +1,126 @@
+.light {
+  background-color: $light-mode-background;
+  color: $light-mode-text;
+}
+.dark {
+  background-color: $dark-mode-background;
+  color: $dark-mode-text;
+}
+
+.country__details {
+  height: calc(100vh - 5.3rem);
+  padding: 6rem;
+
+  @media only screen and (max-width: 375px) {
+    & {
+      height: fit-content;
+    }
+  }
+
+  & button {
+    border-radius: 0.5rem;
+    margin: 0 2rem 4rem 0;
+    padding: 1.2rem 2rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    transition: all 0.3s;
+
+    &.btn-light {
+      box-shadow: 0 0.1rem 1rem rgba(52, 52, 52, 0.3);
+      background-color: $light-mode-element;
+
+    }
+    &.btn-dark {
+      box-shadow: 0 0.1rem 1rem rgba(23, 23, 23, 0.7);
+      background-color: $dark-mode-element;
+    }
+    &::before {
+      content: "\27F5";
+      background-color: inherit;
+      font-size: 2rem;
+      font-weight: bolder;
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-0.2rem);
+    }
+  }
+}
+.details__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: 375px) {
+    & {
+      flex-direction: column;
+    }
+  }
+  & figure {
+    height: 45vh;
+    flex-basis: 35%;
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  & div {
+    flex-basis: 55%;
+    color: inherit;
+
+    & h1 {
+      font-size: 3rem;
+
+      @media only screen and (max-width: 375px) {
+        & {
+          margin: 2rem 0;
+        }
+      }
+    }
+
+    & .detail {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      @media only screen and (max-width: 375px) {
+        & {
+          flex-direction: column;
+        }
+      }
+
+      & div {
+        & p {
+          margin: 1.5rem 0;
+          font-size: 1.8rem;
+          font-weight: 400;
+
+          & span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    & .border {
+      margin-top: 0.7rem;
+      font-size: 1.8rem;
+      font-weight: 400;
+
+      & span {
+        font-weight: 600;
+        margin: 0 0.3rem;
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.3rem;
+        border: 0.1rem solid $light-mode-input;
+      }
+    }
+  }
+}
